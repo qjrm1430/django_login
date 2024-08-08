@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import getIndex
+
+from .views import join_user, login_user, logout_user
 
 urlpatterns = [
-    path("", getIndex, name="user-admin"),
+    path("", login_user, name="user-login"),
+    path("join/", join_user, name="user-join"),
+    path("logout/", logout_user, name="user-logout"),
 ]
